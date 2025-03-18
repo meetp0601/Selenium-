@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FirstPage extends BasePage {
+public class InputPage extends BasePage {
     public WebDriver driver;
-    public FirstPage(WebDriver driver){
+    public InputPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver , this);
     }

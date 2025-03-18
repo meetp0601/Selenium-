@@ -1,5 +1,6 @@
 package Base;
 
+import Utility.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,9 +11,11 @@ public class BasePage {
 
     @BeforeMethod
     public void initializeDriver(){
+        ConfigReader.loadProperties();
         driver = new ChromeDriver();
         driver.manage().window().fullscreen();
-        driver.get("https://www.qa-practice.com/");
+        driver.get(ConfigReader.getProperties("url2"));
+
     }
 
     public void Wait() throws InterruptedException {
