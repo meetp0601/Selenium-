@@ -6,21 +6,23 @@ import Pages.InputPage;
 import Pages.ButtonsPage;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class FirstTest extends BasePage {
     InputPage obj1;
     ButtonsPage obj2;
     CheckBoxPage obj3;
     @Test
-    public void InputDetails() throws InterruptedException {
-//        First();
-//        Second();
+    public void InputDetails() throws InterruptedException, IOException {
+        First();
+        Second();
         Third();
     }
-    public void First() throws InterruptedException {
+    public void First() throws InterruptedException, IOException {
         obj1 = new InputPage(driver);
-        obj1.enterText("Meet");
-        obj1.enterEmail("meetp2684@gmail.com");
-        obj1.enterPassword("12345");
+        obj1.enterText();
+        obj1.enterEmail();
+        obj1.enterPassword();
     }
     public void Second() throws InterruptedException {
         obj2 = new ButtonsPage(driver);

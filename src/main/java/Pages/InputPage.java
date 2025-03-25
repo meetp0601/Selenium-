@@ -1,11 +1,15 @@
 package Pages;
 
 import Base.BasePage;
+import Utility.ExcelUtils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.IOException;
+
 
 public class InputPage extends BasePage {
     public WebDriver driver;
@@ -32,28 +36,30 @@ public class InputPage extends BasePage {
     @FindBy(id = "id_password")
     WebElement InputPassword2;
 
-    public void enterText(String Text) throws InterruptedException {
-        InputText.click();
-        Wait();
-        InputText2.sendKeys(Text);
-        Wait();
-        InputText2.sendKeys(Keys.ENTER);
-        Wait();
+    public void enterText() throws InterruptedException, IOException {
+        System.out.println(" Before clicked");
+        for (int i = 0; i <= 4; i++) {
+            InputText.click();
+            String Text = ExcelUtils.getData(i ,0);
+            InputText2.sendKeys(Text);
+            InputText2.sendKeys(Keys.ENTER);
+        }
     }
-    public void enterEmail(String email) throws InterruptedException {
-        InputEmail.click();
-        Wait();
-        InputEmail2.sendKeys(email);
-        Wait();
-        InputEmail2.sendKeys(Keys.ENTER);
-        Wait();
+    public void enterEmail() throws InterruptedException, IOException {
+
+        for (int i = 0; i <= 4 ; i++) {
+            InputEmail.click();
+            String email = ExcelUtils.getData(i,1);
+            InputEmail2.sendKeys(email);
+            InputEmail2.sendKeys(Keys.ENTER);
+        }
     }
-    public void enterPassword(String password) throws InterruptedException {
+    public void enterPassword() throws InterruptedException, IOException {
         InputPassword.click();
-        Wait();
-        InputPassword2.sendKeys(password);
-        Wait();
-        InputPassword2.sendKeys(Keys.ENTER);
-        Wait();
+        for (int i = 0; i <= 4 ; i++) {
+            String password = ExcelUtils.getData(i,2);
+            InputPassword2.sendKeys(password);
+            InputPassword2.sendKeys(Keys.ENTER);
+        }
     }
 }

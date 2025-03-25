@@ -13,7 +13,7 @@ public class BasePage {
     public void initializeDriver(){
         ConfigReader.loadProperties();
         driver = new ChromeDriver();
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         driver.get(ConfigReader.getProperties("url2"));
 
     }

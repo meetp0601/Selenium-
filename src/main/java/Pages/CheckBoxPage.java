@@ -15,7 +15,7 @@ public class CheckBoxPage extends BasePage {
 
     @FindBy(xpath = "//a[contains(text() , 'Checkbox')]")
     WebElement clickCheckBox;
-    //id_checkbox_0
+
     @FindBy(id = "id_checkbox_0")
     WebElement clickCheckBox1;
 
