@@ -14,7 +14,7 @@ public class CheckBoxPage extends BasePage {
     }
 
     @FindBy(xpath = "//a[contains(text() , 'Checkbox')]")
-    WebElement clickCheckBox;
+    WebElement CheckBoxPage;
 
     @FindBy(id = "id_checkbox_0")
     WebElement clickCheckBox1;
@@ -30,8 +30,9 @@ public class CheckBoxPage extends BasePage {
 
     @FindBy(id = "submit-id-submit")
     WebElement clickSubmit;
+
     public void checkbox() throws InterruptedException {
-        clickCheckBox.click();
+        CheckBoxPage.click();
         Wait();
         clickCheckBox1.click();
         Wait();

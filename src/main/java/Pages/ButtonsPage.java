@@ -15,7 +15,7 @@ public class ButtonsPage extends BasePage {
 
     //Button 1
     @FindBy(xpath = "//a[contains(text() , 'Buttons' )]")
-    WebElement btn1;
+    WebElement ButtonPage;
 
     @FindBy(id = "submit-id-submit")
     WebElement clickBtn1;
@@ -41,7 +41,7 @@ public class ButtonsPage extends BasePage {
     WebElement clickBtn3;
 
     public void enterButton() throws InterruptedException {
-        btn1.click();
+        ButtonPage.click();
         Wait();
         clickBtn1.click();
         Wait();
