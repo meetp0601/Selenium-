@@ -55,7 +55,7 @@ public class InputPage extends BasePage {
             assertTrueCondition(isTextDisplay , "No Text");
             String actualText = result.getText();
             assertEqualValues(actualText , Text , "Mismatched");
-            ExcelUtils.writeResult(i , 6 , Text);
+//            ExcelUtils.writeResult(i , 6 , Text);
         }
     }
     public void enterEmail() throws InterruptedException, IOException {
@@ -68,7 +68,7 @@ public class InputPage extends BasePage {
             assertTrueCondition(isEmailDisplay , "No Email");
             String actualText = result.getText();
             assertEqualValues(actualText , "email" , "Mismatched");
-            ExcelUtils.writeResult(i , 7 , email);
+//            ExcelUtils.writeResult(i , 7 , email);
         }
 
     }
@@ -83,7 +83,7 @@ public class InputPage extends BasePage {
             String actualText = result.getText();
             assertEqualValues(actualText , password , "Mismatched");
 
-            ExcelUtils.writeResult(i , 8 , password);
+//            ExcelUtils.writeResult(i , 8 , password);
         }
     }
 }

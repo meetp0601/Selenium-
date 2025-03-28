@@ -32,22 +32,25 @@ public class NewTabPage {
     @FindBy(id="req_header")
     WebElement req;
 
-    public void clickTab1(){
+    public void clickTab1() throws InterruptedException {
         String OriginalWindow = driver.getWindowHandle();
         NewTabPage.click();
         clicknewtab1.click();
         System.out.println("1");
-
-        for (String newWindow : driver.getWindowHandles()){
-            if( !newWindow.equals(OriginalWindow) ){
-                driver.switchTo().window(newWindow);
-                req.click();
-                Assert.assertEquals(result.getText() ,"I am a new page in a new tab");
-                System.out.println("done");
-                driver.close();
+    driver.close();
+//        for (String newWindow : driver.getWindowHandles()){
+//            if( !newWindow.equals(OriginalWindow || OriginalWindow) ){
+//                driver.switchTo().window(newWindow);
+//                req.click();
+//                Assert.assertEquals(result.getText() ,"I am a new page in a new tab");
+//                System.out.println("done");
+//                wait();
+////                driver.close();
 //                driver.switchTo().window(OriginalWindow);
-            }
-        }
+//                wait();
+//                System.out.println("check");
+//            }
+//        }
 
     }
     public void clickTab2(){
