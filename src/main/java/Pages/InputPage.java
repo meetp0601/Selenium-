@@ -2,16 +2,18 @@ package Pages;
 
 import Base.BasePage;
 import Utility.ExcelUtils;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import java.io.File;
 import java.io.IOException;
 
+import static Utility.ScreenshotUtil.captureScreenshot;
 import static org.testng.Assert.*;
 
 
@@ -58,6 +60,7 @@ public class InputPage extends BasePage {
 //            ExcelUtils.writeResult(i , 6 , Text);
         }
     }
+
     public void enterEmail() throws InterruptedException, IOException {
         for (int i = 0; i <= 4 ; i++) {
             InputEmail.click();

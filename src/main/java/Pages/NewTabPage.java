@@ -1,10 +1,16 @@
 package Pages;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+
+import java.io.File;
+import java.io.IOException;
 
 public class NewTabPage {
     public WebDriver driver;
@@ -32,11 +38,13 @@ public class NewTabPage {
     @FindBy(id="req_header")
     WebElement req;
 
-    public void clickTab1() throws InterruptedException {
+    public void clickTab1() throws InterruptedException, IOException {
         String OriginalWindow = driver.getWindowHandle();
         NewTabPage.click();
         clicknewtab1.click();
         System.out.println("1");
+        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(src, new File("screenshot.png"));
     driver.close();
 //        for (String newWindow : driver.getWindowHandles()){
 //            if( !newWindow.equals(OriginalWindow || OriginalWindow) ){

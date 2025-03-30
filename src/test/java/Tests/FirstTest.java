@@ -15,11 +15,11 @@ public class FirstTest extends BasePage {
     IframePage obj6;
     @Test
     public void InputDetails() throws InterruptedException, IOException {
-        First();
-        Second();
+//        First();
+//        Second();
         Third();
-        Forth();
-        Fifth();
+//        Forth();
+//        Fifth();
 //        Sixth();
     }
     public void First() throws InterruptedException, IOException {
@@ -27,7 +27,6 @@ public class FirstTest extends BasePage {
         obj1.enterText();
         obj1.enterEmail();
         obj1.enterPassword();
-
     }
     public void Second() throws InterruptedException {
         obj2 = new ButtonsPage(driver);
@@ -43,7 +42,7 @@ public class FirstTest extends BasePage {
         obj4.setClickDropdown();
         obj4.setClickDropdown2();
     }
-    public void Fifth() throws InterruptedException {
+    public void Fifth() throws InterruptedException, IOException {
         obj5 = new NewTabPage(driver);
         obj5.clickTab1();
 //        obj5.clickTab2();
@@ -52,5 +51,4 @@ public class FirstTest extends BasePage {
         obj6 = new IframePage(driver);
         obj6.iframes();
     }
-
 }
