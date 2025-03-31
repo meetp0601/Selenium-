@@ -70,7 +70,7 @@ public class InputPage extends BasePage {
             boolean isEmailDisplay = InputEmail2.isDisplayed();
             assertTrueCondition(isEmailDisplay , "No Email");
             String actualText = result.getText();
-            assertEqualValues(actualText , "email" , "Mismatched");
+            assertEqualValues(actualText , email , "Mismatched");
 //            ExcelUtils.writeResult(i , 7 , email);
         }
 
@@ -85,7 +85,6 @@ public class InputPage extends BasePage {
             assertTrueCondition(isPasswordDisplay , "No Password");
             String actualText = result.getText();
             assertEqualValues(actualText , password , "Mismatched");
-
 //            ExcelUtils.writeResult(i , 8 , password);
         }
     }

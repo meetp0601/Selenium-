@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class ScreenshotUtil {
     public static void captureScreenshot(WebDriver driver, String filename) {
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File destFile = new File("screenshots/" + filename + ".png");
+        File destFile = new File("C:/Users/meet.patel/IdeaProjects/Selenium-/screenshots" + filename + ".png");
         try {
             FileUtils.copyFile(srcFile, destFile);
         } catch (IOException e) {

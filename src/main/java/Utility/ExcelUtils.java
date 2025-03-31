@@ -16,7 +16,7 @@ public class ExcelUtils {
 //    public static String filePath2 = "C:/Users/meet.patel/IdeaProjects/Selenium-/OutputData.xlsx";
 
     public static String getData(int row, int col) throws IOException {
-        FileInputStream fis = new FileInputStream(filePath);
+        FileInputStream fis = new FileInputStream(ConfigReader.getProperties("excelfilePath"));
         Workbook workbook = new XSSFWorkbook(fis);
         Sheet sheet = workbook.getSheetAt(0);
 

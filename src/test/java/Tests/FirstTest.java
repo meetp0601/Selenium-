@@ -12,15 +12,17 @@ public class FirstTest extends BasePage {
     CheckBoxPage obj3;
     SelectPage obj4;
     NewTabPage obj5;
-    IframePage obj6;
+    TextAreaPage obj6;
+    AlertsPage obj7;
     @Test
     public void InputDetails() throws InterruptedException, IOException {
 //        First();
 //        Second();
-        Third();
+//        Third();
 //        Forth();
 //        Fifth();
 //        Sixth();
+        Seventh();
     }
     public void First() throws InterruptedException, IOException {
         obj1 = new InputPage(driver);
@@ -48,7 +50,15 @@ public class FirstTest extends BasePage {
 //        obj5.clickTab2();
     }
     public void Sixth() throws InterruptedException {
-        obj6 = new IframePage(driver);
-        obj6.iframes();
+        obj6 = new TextAreaPage(driver);
+        obj6.setTextArea1();
+        obj6.setTextArea2();
+
+    }
+    public void Seventh() throws InterruptedException {
+        obj7 = new AlertsPage(driver);
+        obj7.setAlert1();
+        obj7.setAlert2();
+        obj7.setAlert3();
     }
 }
